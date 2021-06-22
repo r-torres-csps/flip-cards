@@ -1,30 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./theme/styles.css">
     <title>Flip cards</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
-    <section class="card-container">
-        <div class="card-front">
-            <img src="https://papp.csps-efpc.gc.ca/ProdContent/cninv000000000019599/content/medias/images/group-chatting.jpg" alt="card front">
-            <h2>Card front</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, hic accusantium beatae eveniet quidem temporibus modi, nobis suscipit assumenda ut eaque repudiandae corporis voluptates quis veniam maiores impedit, nemo possimus.</p>
-            <button type="submit" class="flip">Click here</button>
-        </div>
-        <div class="card-back">
-            <img src="https://papp.csps-efpc.gc.ca/ProdContent/cninv000000000019599/content/medias/images/manager-leading-meeting.jpg" alt="card back">
-            <h2>Card back</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure ducimus nam consectetur atque et laborum esse sit, ipsa ratione perspiciatis qui, repudiandae magnam, eos reiciendis! Similique enim dolorum totam quis.</p>
-            <button type="submit" class="flip">Click here</button>
-        </div>
-    </section>
-    
+    <div class="card-flex">
+        <section class="card-container">
+            <div class="card-front first-card" tabindex="0">
+                <p>1. An Assessment of the Workplace</p>
+                <button class="flip snap-md LOM-btn ico-LOM-search" data-card="first-card"
+                    aria-labelledby="Reveal front of the card" tabindex="0">Learn more </button>
+            </div>
+            <div class="card-back first-card" tabindex="0" style="display: none;">
+                <p>The Labour Program at Employment and Social Development Canada provides a <a href="#"
+                        data-ext="ext-wb-26">sample workplace
+                        harassment and violence risk assessment tool</a>. This sample tool
+                    should be customized. Various workplaces may have other elements and specific hazards that
+                    this tool does not address. Employees might be invited to participate while the workplace
+                    assessment is conducted by the designated employer representatives and the applicable
+                    partner representatives. Contact the Designated Recipient if you wish to consult your
+                    organization’s workplace harassment and violence risk assessment tool.</p>
+                <button class="flip snap-md LOM-btn ico-QS-left flip-this-card" data-card="first-card"
+                    aria-labelledby=" Reveal front of the card" tabindex="0">Back to prompt</button>
+            </div>
+        </section>
+        <!-- Second card -->
+        <section class="card-container">
+            <div class="card-front second-card" tabindex="0">
+                <p>2. A Harassment and Violence Prevention Policy</p>
+                <button class="flip snap-md LOM-btn ico-LOM-search" aria-labelledby="Reveal back of the card"
+                    data-card="second-card">Learn more </button>
+            </div>
+            <div class="card-back second-card" tabindex="0" style="display: none;">
+                <p><a href="" target="_blank">This template</a> shows all components that should be included in
+                    a
+                    policy. Every workplace should have an active policy, and you should be able to consult it
+                </p>
+                <button class="flip snap-md LOM-btn ico-QS-left" aria-labelledby="Reveal front of the card" tabindex="0"
+                    data-card="second-card">Back to prompt</button>
+            </div>
+        </section>
+    </div>
     <script src="./index.js"></script>
 </body>
+
 </html>

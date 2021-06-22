@@ -1,22 +1,23 @@
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-* p {
-  -webkit-margin-before: -6px;
-  margin-block-start: -6px;
-  -webkit-margin-after: 10 [x];
-  margin-block-end: 10 [x];
+.card-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  height: 30em;
 }
 
 .card-container {
   position: relative;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, 25%);
-  transform: translate(-50%, 25%);
+  left: 35%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
   padding: 1rem;
-  width: 20em;
+  width: 22em;
+  height: auto;
+  margin-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,11 +29,14 @@
   -ms-flex-pack: center;
   justify-content: center;
 }
+
 .card-container .card-front {
-  background-color: #ddd;
-  border: 2px solid purple;
+  background-color: #fff;
+  border: 2px solid #336699;
   padding: 0.25rem;
   margin: 1rem;
+  width: 20em;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,14 +50,16 @@
   -ms-flex-line-pack: center;
   align-content: center;
 }
+
 .card-container .card-front img {
-  width: 100%;
+  width: 19em;
   -ms-flex-item-align: center;
   align-self: center;
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
   order: 1;
 }
+
 .card-container .card-front h2 {
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
@@ -61,26 +67,167 @@
   -ms-flex-item-align: center;
   align-self: center;
 }
+
 .card-container .card-front p {
-  padding: 0 0.25rem;
+  padding: 1rem;
   -webkit-box-ordinal-group: 4;
   -ms-flex-order: 3;
   order: 3;
   border-width: 0;
 }
+
 .card-container .card-front .flip {
   -webkit-box-ordinal-group: 5;
   -ms-flex-order: 4;
   order: 4;
 }
+
 .card-container .card-front .flip:hover {
   cursor: pointer;
 }
+
 .card-container .card-back {
-  background-color: #ddd;
-  border: 2px solid purple;
+  background-color: #fff000;
+  border: 2px solid #336699;
   padding: 0.25rem;
   margin: 1rem;
+  width: 20em;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  min-height: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+}
+
+.card-container .card-back img {
+  width: 19em;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.card-container .card-back h2 {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.card-container .card-back p {
+  display: inline-block;
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3;
+  padding: 1rem;
+  width: 100%;
+}
+
+.card-container .card-back .flip {
+  -webkit-box-ordinal-group: 5;
+  -ms-flex-order: 4;
+  order: 4;
+}
+
+.card-container .card-back .flip:hover {
+  cursor: pointer;
+}
+
+.card-container2 {
+  position: relative;
+  left: 35%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  padding: 1rem;
+  width: 22em;
+  height: auto;
+  margin-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.card-container2 .card-front2 {
+  background-color: #fff000;
+  border: 2px solid #336699;
+  padding: 0.25rem;
+  margin: 1rem;
+  width: 20em;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.card-container2 .card-front2 img {
+  width: 19em;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.card-container2 .card-front2 h2 {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.card-container2 .card-front2 p {
+  padding: 1rem;
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3;
+  border-width: 0;
+}
+
+.card-container2 .card-front2 .flip2 {
+  -webkit-box-ordinal-group: 5;
+  -ms-flex-order: 4;
+  order: 4;
+}
+
+.card-container2 .card-front2 .flip2:hover {
+  cursor: pointer;
+}
+
+.card-container2 .card-back2 {
+  background-color: #fff000;
+  border: 2px solid #336699;
+  padding: 0.25rem;
+  margin: 1rem;
+  width: 20em;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,32 +241,51 @@
   -ms-flex-line-pack: justify;
   align-content: space-between;
 }
-.card-container .card-back img {
-  width: 100%;
+
+.card-container2 .card-back2 img {
+  width: 19em;
   -ms-flex-item-align: center;
   align-self: center;
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
   order: 1;
 }
-.card-container .card-back h2 {
+
+.card-container2 .card-back2 h2 {
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
   order: 2;
   -ms-flex-item-align: center;
   align-self: center;
 }
-.card-container .card-back p {
-  padding: 0 0.25rem;
+
+.card-container2 .card-back2 p {
+  padding: 1rem;
   -webkit-box-ordinal-group: 4;
   -ms-flex-order: 3;
   order: 3;
 }
-.card-container .card-back .flip {
+
+.card-container2 .card-back2 .flip2 {
   -webkit-box-ordinal-group: 5;
   -ms-flex-order: 4;
   order: 4;
 }
-.card-container .card-back .flip:hover {
+
+.card-container2 .card-back2 .flip2:hover {
   cursor: pointer;
-} /*# sourceMappingURL=styles.css.map */
+}
+
+button.flip.snap-md.LOM-btn,
+button.flip2.snap-md.LOM-btn {
+  background: #000333;
+  text-align: center;
+  padding: 0 10px 0 0;
+}
+
+button.flip.snap-md.LOM-btn:hover,
+button.flip2.snap-md.LOM-btn:hover {
+  background: #790823;
+}
+
+/*# sourceMappingURL=styles.css.map */

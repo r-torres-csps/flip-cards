@@ -1,34 +1,39 @@
-* {
-  box-sizing: border-box;
-
-  p {
-    margin-block-start: -6px;
-    margin-block-end: 10[x];
-  }
+.card-flex {
+  display: flex;
+  flex-flow: row wrap;
+  height: 30em;
 }
+
+// main {
+//     height: 60em;
+// }
+
 .card-container {
   position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, 25%);
+  left: 35%;
+  transform: translate(-50%);
   padding: 1rem;
-  width: 20em;
+  width: 22em;
+  height: auto;
+  margin-bottom: 3rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 
   .card-front {
-    background-color: #ddd;
-    border: 2px solid purple;
+    background-color: #000;
+    border: 2px solid #336699;
     padding: 0.25rem;
     margin: 1rem;
+    width: 20em;
+    height: auto;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-content: center;
 
     img {
-      width: 100%;
+      width: 19em;
       align-self: center;
       order: 1;
     }
@@ -39,7 +44,7 @@
     }
 
     p {
-      padding: 0 0.25rem;
+      padding: 1rem;
       order: 3;
       border-width: 0;
     }
@@ -54,17 +59,20 @@
   }
 
   .card-back {
-    background-color: #ddd;
-    border: 2px solid purple;
+    background-color: #000;
+    border: 2px solid #336699;
     padding: 0.25rem;
     margin: 1rem;
+    width: 20em;
+    height: auto;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
+    min-height: auto;
     justify-content: center;
     align-content: space-between;
 
     img {
-      width: 100%;
+      width: 19em;
       align-self: center;
       order: 1;
     }
@@ -75,8 +83,10 @@
     }
 
     p {
-      padding: 0 0.25rem;
+      display: inline-block;
       order: 3;
+      padding: 1rem;
+      width: 100%;
     }
 
     .flip {
@@ -84,6 +94,110 @@
 
       &:hover {
         cursor: pointer;
+      }
+    }
+  }
+}
+
+.card-container2 {
+  position: relative;
+  left: 35%;
+  transform: translate(-50%);
+  padding: 1rem;
+  width: 22em;
+  height: auto;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  .card-front2 {
+    background-color: #000;
+    border: 2px solid #336699;
+    padding: 0.25rem;
+    margin: 1rem;
+    width: 20em;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+
+    img {
+      width: 19em;
+      align-self: center;
+      order: 1;
+    }
+
+    h2 {
+      order: 2;
+      align-self: center;
+    }
+
+    p {
+      padding: 1rem;
+      order: 3;
+      border-width: 0;
+    }
+
+    .flip2 {
+      order: 4;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .card-back2 {
+    background-color: #000;
+    border: 2px solid #336699;
+    padding: 0.25rem;
+    margin: 1rem;
+    width: 20em;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: space-between;
+
+    img {
+      width: 19em;
+      align-self: center;
+      order: 1;
+    }
+
+    h2 {
+      order: 2;
+      align-self: center;
+    }
+
+    p {
+      padding: 1rem;
+      order: 3;
+    }
+
+    .flip2 {
+      order: 4;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Flip card buttons
+button.flip,
+button.flip2 {
+  &.snap-md {
+    &.LOM-btn {
+      background: #000333;
+      text-align: center;
+      padding: 0 10px 0 0;
+
+      &:hover {
+        background: #790823;
       }
     }
   }
